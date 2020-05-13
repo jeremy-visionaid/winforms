@@ -1449,8 +1449,8 @@ namespace System.Windows.Forms
 
             if (keyCode == Keys.Left || keyCode == Keys.Right)
             {
-                bool rightAligned = SystemInformation.RightAlignedMenus;
-                bool forward = (keyCode == Keys.Left && rightAligned) || (keyCode == Keys.Right && !rightAligned);
+                bool rtl = RightToLeft == RightToLeft.Yes;
+                bool forward = (keyCode == Keys.Left && rtl) || (keyCode == Keys.Right && !rtl);
 
                 if (!IsFirstDropDown && !forward)
                 {
